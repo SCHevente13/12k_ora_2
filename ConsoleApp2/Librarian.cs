@@ -15,5 +15,10 @@ namespace ConsoleApp2
             Name = name;
             Librarby = library;
         }
+        public void Introduce()
+        {
+            Console.WriteLine($"Name: {Name} | Library: {Librarby.Name}");
+        }
+
     }
 }

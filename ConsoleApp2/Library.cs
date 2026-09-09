@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    internal class Library
+    public class Library
     {
         public string Name { get; set; }
         private List<Book> books { get; set; }
