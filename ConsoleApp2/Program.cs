@@ -46,7 +46,7 @@
             library.AddBook(book1);
             library.AddBook(book2);
             library.AddBook(book3);
-
+            Librarian librarian = new Librarian("Bob", library);
 
         }
     }

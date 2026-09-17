@@ -19,6 +19,14 @@ namespace ConsoleApp2
         {
             Console.WriteLine($"Name: {Name} | Library: {Librarby.Name}");
         }
-
+        public void AddBook(string title, string author, int pageCount)
+        {
+            Librarby.AddBook(new Book(title, author, pageCount));
+            Console.WriteLine("Added Book");
+        }
+        public void LendBook(string title)
+        {
+            Librarby.FindByTitle(title).Borrow();
+        }
     }
 }

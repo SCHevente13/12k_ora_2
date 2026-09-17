@@ -30,24 +30,24 @@ namespace ConsoleApp2
                 Console.WriteLine(book.Describe());
             }
         }
-        public string FindByTitle(string title)
+        public Book FindByTitle(string title)
         {
             foreach (Book book in books)
             {
                 if (book.Title == title)
                 {
-                    return book.Describe();
+                    return book;
                 }
             }
             return null;
         }
-        public string FindByAuthor(string author)
+        public Book FindByAuthor(string author)
         {
             foreach (Book book in books)
             {
                 if (book.Author == author)
                 {
-                    return book.Describe();
+                    return book;
                 }
             }
             return null;
