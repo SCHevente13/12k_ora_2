@@ -8,6 +8,7 @@ namespace ConsoleApp2
 {
     public class Librarian
     {
+        public static int BooksBorrowed = 0;
         public string Name { get; set; }
         private Library Librarby { get; set; }
         public Librarian(string name, Library library)
@@ -26,7 +27,19 @@ namespace ConsoleApp2
         }
         public void LendBook(string title)
         {
-            Librarby.FindByTitle(title).Borrow();
+            if (Librarby.FindByTitle(title).Borrow())
+            {
+                Console.WriteLine("Book borrowed.");
+                BooksBorrowed++;
+            }
+            else
+            {
+                Console.WriteLine("Book not available.");
+            }
+        }
+        public void TakeBack(string title)
+        {
+            Librarby.FindByTitle(title).Return();
         }
     }
 }
